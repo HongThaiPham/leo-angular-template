@@ -1,3 +1,5 @@
+import { NgtUniversalModule } from '@ng-toolkit/universal';
+import { CommonModule } from '@angular/common';
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -10,11 +12,13 @@ import { NotFoundComponent } from './shared/not-found/not-found.component';
     AppComponent,
     NotFoundComponent
   ],
-  imports: [
-    BrowserModule,
+  imports:[
+ CommonModule,
+NgtUniversalModule,
+ 
+    
     AppRoutingModule
   ],
   providers: [Title],
-  bootstrap: [AppComponent]
 })
 export class AppModule { }
