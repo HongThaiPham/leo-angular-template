@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+/* src/assets/scss/styles.scss */
+// partials
+@import 'partials/layout.vars';
+@import 'partials/responsive.partial';
+
+// global styles
+@import 'base';
