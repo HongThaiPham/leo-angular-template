@@ -1,3 +1,16 @@
-<p>
-  user works!
-</p>
+<div class="layout-overflow">
+  <div class="layout-canvas" [ngClass]="{ 'nav-open': navOpen, 'nav-closed': !navOpen }" [style.min-height]="minHeight">
+
+    <!-- HEADER -->
+    <leo-header (navToggled)="navToggledHandler($event)"></leo-header>
+
+    <!-- CONTENT -->
+    <div id="layout-view" class="layout-view">
+      <router-outlet></router-outlet>
+    </div>
+
+    <!-- FOOTER -->
+    <leo-footer></leo-footer>
+
+  </div> <!-- /.layout-canvas -->
+</div> <!-- /.layout-overflow -->
