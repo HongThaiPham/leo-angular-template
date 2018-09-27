@@ -6,19 +6,12 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './shared/not-found/not-found.component';
+import { AuthService } from './auth/auth.service';
+import { CallbackComponent } from './shared/callback/callback.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NotFoundComponent
-  ],
-  imports:[
- CommonModule,
-NgtUniversalModule,
- 
-    
-    AppRoutingModule
-  ],
-  providers: [Title],
+  declarations: [AppComponent, NotFoundComponent, CallbackComponent],
+  imports: [CommonModule, NgtUniversalModule, AppRoutingModule],
+  providers: [Title, AuthService]
 })
-export class AppModule { }
+export class AppModule {}
